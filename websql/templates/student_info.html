@@ -1,0 +1,17 @@
+<html>
+<body>
+<!-- {{ blah }} notation is how you print in Jinja,
+{{last_name}} etc.. are serving as placeholders,
+this content comes from webapp.py-->
+	<h1>Student: {{last_name}}, {{first_name}}</h1>
+	<ul>
+	{% for project in projects %}
+		<li><strong> Project: </strong> <a href = "/project_title?project={{project[2]}}&github={{project[4]}}"> {{project[2]}} </a> Grade: {{ project[3] }} </li>
+		
+	{% endfor %}
+	</ul>
+	<!-- <h2>Project Title: {{ project_title}} Grade: {{ grade }} </h2> -->
+	<p>This student has shown extreme recalcitrance and has generally proved to be unreliable.</p>
+	<p>It is my recommendation that they be put on double-secret probation for the remainder of the course.</p>
+</body>
+</html>

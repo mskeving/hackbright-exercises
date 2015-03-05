@@ -1,0 +1,18 @@
+<html>
+<body>
+
+	<p><a href = "/student?student={{request.args.get("github")}}">Back</a></p> 
+	<!-- always equal to chriszf
+	go back based on students github
+	Added Grades.student_github to get_grades_by_project to get projects[0][4]-->
+	<h1>Project: {{project_title}}</h1>
+	<ul>
+	{% for project in projects %}
+		<li><strong> First Name: <a href = "/student?student={{project[4]}}">{{project[0]}}</a>, Last Name: {{ project[1] }} </strong>, Project: {{project[2]}}, Grade: {{project[3]}} </li>
+		
+	{% endfor %}
+	</ul>
+	<!-- <h2>Project Title: {{ project_title}} Grade: {{ grade }} </h2> -->
+
+</body>
+</html>
